@@ -31,19 +31,19 @@ Windowsソフト(rubyにて制作)
 
 <details>
   <summary><b>advance Mode</b></summary>
-  対応してないプール用に引数で実行する方法があります。
-   ・引数0番目 -> poolHost
-   ・引数1番目 -> id
-   ・引数2番目 -> password
-   ・引数3番目 -> speed_mode(true or false)
-   ・引数4番目 -> login_url
-   ・引数5番目 -> trans_url
- 
-  poolHostはroot階層まで入力してください 例)https://xxxxx.xxxx.xxx<br>
-  idはログインid, passwordはパスワード<br>
-  speed_modeは15秒で1ページ取得に変更するか(trueで高速化<br>
-  login_urlはログイン時のroot階層より先のurl 例) /bitzeny/index.php?page=login<br>
-  trans_urlはroot階層より先のTransaction Historyの存在するurl 例) /bitzeny/index.php?page=account&action=transactions<br>
+  対応してないプール用に引数で実行する方法があります。<br>
+   ・引数0番目 -> poolHost<br>
+   ・引数1番目 -> id<br>
+   ・引数2番目 -> password<br>
+   ・引数3番目 -> speed_mode(true or false)<br>
+   ・引数4番目 -> login_url<br>
+   ・引数5番目 -> trans_url<br>
+ <br>
+  poolHost:  root階層まで入力してください 例)https://xxxxx.xxxx.xxx<br>
+  id: ログインid, passwordはパスワード<br>
+  speed_mode: 15秒で1ページ取得に変更するか(trueで高速化<br>
+  login_url:  ログイン時のroot階層より先のurl 例) /bitzeny/index.php?page=login<br>
+  trans_url:  root階層より先のTransaction Historyの存在するurl 例) /bitzeny/index.php?page=account&action=transactions<br>
   引数0個,2個,3個,4個,6個の際に実行可能になってます。<br>
   例) readPool.exe https://xxxxx.xxxx.xxx id pass<br>
 </details>
