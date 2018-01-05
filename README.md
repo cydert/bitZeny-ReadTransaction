@@ -56,13 +56,13 @@ Windowsソフト(rubyにて制作)
 
 ## Installation
 
-  - [Download(Windows)](/master/readPool/readPool.exe)
+  - [Download(Windows)](/readPool/readPool.exe)
   - others
     1. rubyの実行環境を用意する
     2. 実行環境を整える
       gem install nokogiri
       gem install mechanize
-    3. [readPool.rb](/master/readPool/readPool.rb)を実行する(例: ruby readPool.rb)
+    3. [readPool.rb](/readPool/readPool.rb)を実行する(例: ruby readPool.rb)
 
 ***
 
@@ -85,10 +85,10 @@ margePriceはマイニング時の値段を追記するツールです。
 
 ## Installation
 
-  - [Download(Windows)](/master/margePrice/margePrice.exe)
+  - [Download(Windows)](/margePrice/margePrice.exe)
   - others
     1. rubyの実行環境を用意する
-    2. [margePrice.rb](/master/margePrice/margePrice.rb)を実行する(例: ruby margePrice.rb)
+    2. [margePrice.rb](/margePrice/margePrice.rb)を実行する(例: ruby margePrice.rb)
     
 ## author
  - twitter[@cyderts](https://twitter.com/cyderts)
