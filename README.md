@@ -1,7 +1,9 @@
 # index
 - [readPool](#read-pool)... Transaction History をcsv形式で取得
+- [toCryptact](#to-cryptact)... readPoolで取得したcsvを利用して[cryptact](https://tax.cryptact.com/)で使用できるファイル形式に
 - [margePrice](#marge-price)... readPoolで取得したcsvを利用してマイニング時の価格を記入してcsv出力
-- [Author](#author)
+
+- [Author](#author)... twitterとか投げ銭とか
 
 ***
 # read-pool
@@ -66,6 +68,37 @@ Windowsソフト(rubyにて制作)
 
 ***
 
+# to-cryptact
+toCryptactは[cryptact](https://tax.cryptact.com/)で使用できるファイル形式に変更します
+## Description
+[相場チャートのサイト](https://www.coingecko.com/ja/%E7%9B%B8%E5%A0%B4%E3%83%81%E3%83%A3%E3%83%BC%E3%83%88/bitzeny/jpy)からその日の相場を取得し、readPoolより生成したTransaction Historyのcsvを利用して[cryptact](https://tax.cryptact.com/)で使用できるファイル形式にします
+<img src="toCryptact/toCryptact.png" alt="toCryptactView" title="toCryptactView" width="800" height="200">
+
+## Usage
+インストール不要の実行型です。
+1. readPoolから生成したcsvファイルを用意
+2. toCryptactを実行
+3. 生成したcsvファイル名を入力してEnter
+4. 出力先のファイル名を入力してEnter
+5. Source名を入力してEnter
+6. feeを入力してEnter<br>
+あとは待つだけ<br>
+ JPYで、主軸通貨はbitZeny(ZNY), MININGのみを出力します。<br>
+ この際、[相場チャートのサイト](https://www.coingecko.com/ja/%E7%9B%B8%E5%A0%B4%E3%83%81%E3%83%A3%E3%83%BC%E3%83%88/bitzeny/jpy)から相場チャートを自動でDLします。<br>
+ zny-jpy-tmp.csvというファイルが生成されますが、削除してもらって構いません。<br>
+[cryptactにおけるcsvフォーマット](https://tax.cryptact.com/help/custom.html)
+
+
+## Installation
+
+  - [Download(Windows)](/toCryptact/toCryptact.exe)
+  - others
+    1. rubyの実行環境を用意する
+    2. [margePrice.rb](/toCryptact/toCryptact.rb)を実行する(例: ruby toCryptact.rb)
+    
+
+***
+
 # marge-price
 margePriceはマイニング時の値段を追記するツールです。
 ## Description
@@ -78,9 +111,10 @@ margePriceはマイニング時の値段を追記するツールです。
 1. readPoolから生成したcsvファイルを用意
 2. margePriceを実行
 3. 生成したcsvファイル名を入力してEnter
-4. 出力先のファイル名を入力してEnter
-あとは待つだけ
-この際、[相場チャートのサイト](https://www.coingecko.com/ja/%E7%9B%B8%E5%A0%B4%E3%83%81%E3%83%A3%E3%83%BC%E3%83%88/bitzeny/jpy)から相場チャートを自動でDLします。zny-jpy-tmp.csvというファイルが生成されますが、削除してもらって構いません。
+4. 出力先のファイル名を入力してEnter<br>
+あとは待つだけ<br>
+ この際、[相場チャートのサイト](https://www.coingecko.com/ja/%E7%9B%B8%E5%A0%B4%E3%83%81%E3%83%A3%E3%83%BC%E3%83%88/bitzeny/jpy)から相場チャートを自動でDLします。<br>
+ zny-jpy-tmp.csvというファイルが生成されますが、削除してもらって構いません。
 
 
 ## Installation
