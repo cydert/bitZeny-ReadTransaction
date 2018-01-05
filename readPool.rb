@@ -6,6 +6,7 @@ require "csv"
 require 'nokogiri'
 require 'mechanize'
 require 'io/console'
+require 'to-bool'
 
 STDOUT.sync = true
 
@@ -185,6 +186,8 @@ def fin(transes)
   end
 end
 
+
+
 #テーブルのhtmlより要素を取得し<TransData>の配列にセットしてく
 def setElement(table, transes)
   table = table.xpath(".//tbody").first
@@ -215,7 +218,7 @@ transes = [] #各データ<TransData>
 
 is_setTitle = false
 while true do
-  if speed_mode && cnt != 0 then
+  if speed_mode.to_bool && cnt != 0 then
     sleep(15) #待機
   elsif cnt != 0
     sleep(30)
