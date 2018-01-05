@@ -19,6 +19,34 @@ Windowsソフト(rubyにて制作)
 1. readPool.exeを起動
 2. 指示に従って、取得したいプールのURL,id,password,出力先ファイル名を入力する
 3. しばらく待つ
+<details>
+  <summary><b>使用例(大人の自由研究)</b></summary>
+ 
+  1. ホストアドレスに https://ukkey3.space と入力してEnter<br>
+  2. プールにログインする際のid(mail)を入力してEnter<br>
+  3. プールにログインする際のpasswordを入力してEnter<br>
+  4. 出力ファイル名を入力してEnter(実際の出力は出力ファイル名.csvとなる)<br>
+  5. 取得量:xxと表示されたら取得できているので気を長くして待つ<br>
+</details>
+
+<details>
+  <summary><b>advance Mode</b></summary>
+  対応してないプール用に引数で実行する方法があります。
+   ・引数0番目 -> poolHost
+   ・引数1番目 -> id
+   ・引数2番目 -> password
+   ・引数3番目 -> speed_mode(true or false)
+   ・引数4番目 -> login_url
+   ・引数5番目 -> trans_url
+ 
+  poolHostはroot階層まで入力してください 例)https://xxxxx.xxxx.xxx<br>
+  idはログインid, passwordはパスワード<br>
+  speed_modeは15秒で1ページ取得に変更するか(trueで高速化<br>
+  login_urlはログイン時のroot階層より先のurl 例) /bitzeny/index.php?page=login<br>
+  trans_urlはroot階層より先のTransaction Historyの存在するurl 例) /bitzeny/index.php?page=account&action=transactions<br>
+  引数0個,2個,3個,4個,6個の際に実行可能になってます。<br>
+  例) readPool.exe https://xxxxx.xxxx.xxx id pass<br>
+</details>
 
 ## Installation
 
@@ -29,6 +57,10 @@ Windowsソフト(rubyにて制作)
       gem install nokogiri
       gem install mechanize
     3. [readPool.rb](/master/readPool.rb)を実行する(例: ruby readPool.rb)
+    
+## Author
+ - twitter[@cyderts](https://twitter.com/cyderts)
+ - bitZenyWallet `ZsexFk72EVrG129ZLhW7s8sQnT7t25Gwjg`
 ## License
 
 [MIT](LICENSE)
