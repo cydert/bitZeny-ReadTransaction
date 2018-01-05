@@ -1,5 +1,11 @@
-# readPool
-bitZenyのプール利用者向けツールです。
+# index
+- [readPool](#read-pool)... Transaction History をcsv形式で取得
+- [margePrice](#marge-price)... readPoolで取得したcsvを利用してマイニング時の価格を記入してcsv出力
+- [Author](#author)
+
+***
+# read-pool
+readPoolはbitZenyのマイニングプール利用者向けツールです。
 
 ## Description
 Windowsソフト(rubyにて制作)
@@ -8,14 +14,14 @@ Windowsソフト(rubyにて制作)
 どのタイミングでマイニングや払い出しをしたか管理するツール使用時に便利です。
 プールへの負担軽減のため、デフォルトで1ページ30秒で取得します。(実質1件1秒です)
 
-<img src="exchange.png" alt="sampleView" title="sampleView" width="600" height="500">
+<img src="exchange.png" alt="sampleView" title="sampleView" width="550" height="400">
 
 全プールで確かめたわけではありまん。自己責任でご使用ください。
 ### 現在確認済みのプール
   * [大人の自由研究](https://ukkey3.space/bitzeny)
 
 ## Usage
-
+インストール不要の実行型です。
 1. readPool.exeを起動
 2. 指示に従って、取得したいプールのURL,id,password,出力先ファイル名を入力する
 3. しばらく待つ
@@ -51,16 +57,43 @@ Windowsソフト(rubyにて制作)
 ## Installation
 
   - [Download(Windows)](/master/readPool.exe)
-  - other
+  - others
     1. rubyの実行環境を用意する
     2. 実行環境を整える
       gem install nokogiri
       gem install mechanize
     3. [readPool.rb](/master/readPool.rb)を実行する(例: ruby readPool.rb)
+
+***
+
+# marge-price
+margePriceはマイニング時の値段を追記するツールです。
+## Description
+相場チャートからその日の相場を取得し、readPoolより生成したTransaction Historyのcsvにマイニング時の値段を追記します。
+
+<img src="marge.png" alt="margeView" title="margeView" width="800" height="200">
+
+## Usage
+インストール不要の実行型です。
+1. readPoolから生成したcsvファイルを用意
+2. margePriceを実行
+3. 生成したcsvファイル名を入力してEnter
+4. 出力先のファイル名を入力してEnter
+あとは待つだけ
+この際、[相場チャートのサイト](https://www.coingecko.com/ja/%E7%9B%B8%E5%A0%B4%E3%83%81%E3%83%A3%E3%83%BC%E3%83%88/bitzeny/jpy)から相場チャートを自動でDLします。zny-jpy-tmp.csvというファイルが生成されますが、削除してもらって構いません。
+
+
+## Installation
+
+  - [Download(Windows)](/master/margePrice.exe)
+  - others
+    1. rubyの実行環境を用意する
+    2. [margePrice.rb](/master/margePrice.rb)を実行する(例: ruby margePrice.rb)
     
-## Author
+## author
  - twitter[@cyderts](https://twitter.com/cyderts)
  - bitZenyWallet `ZsexFk72EVrG129ZLhW7s8sQnT7t25Gwjg`
+ 
 ## License
 
 [MIT](LICENSE)
