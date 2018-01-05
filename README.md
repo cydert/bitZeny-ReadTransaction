@@ -14,7 +14,7 @@ Windowsソフト(rubyにて制作)
 どのタイミングでマイニングや払い出しをしたか管理するツール使用時に便利です。
 プールへの負担軽減のため、デフォルトで1ページ30秒で取得します。(実質1件1秒です)
 
-<img src="exchange.png" alt="sampleView" title="sampleView" width="550" height="400">
+<img src="readPool/exchange.png" alt="sampleView" title="sampleView" width="550" height="400">
 
 全プールで確かめたわけではありまん。自己責任でご使用ください。
 ### 現在確認済みのプール
@@ -56,13 +56,13 @@ Windowsソフト(rubyにて制作)
 
 ## Installation
 
-  - [Download(Windows)](/master/readPool.exe)
+  - [Download(Windows)](/master/readPool/readPool.exe)
   - others
     1. rubyの実行環境を用意する
     2. 実行環境を整える
       gem install nokogiri
       gem install mechanize
-    3. [readPool.rb](/master/readPool.rb)を実行する(例: ruby readPool.rb)
+    3. [readPool.rb](/master/readPool/readPool.rb)を実行する(例: ruby readPool.rb)
 
 ***
 
@@ -71,7 +71,7 @@ margePriceはマイニング時の値段を追記するツールです。
 ## Description
 相場チャートからその日の相場を取得し、readPoolより生成したTransaction Historyのcsvにマイニング時の値段を追記します。
 
-<img src="marge.png" alt="margeView" title="margeView" width="800" height="200">
+<img src="margePrice/marge.png" alt="margeView" title="margeView" width="800" height="200">
 
 ## Usage
 インストール不要の実行型です。
@@ -85,10 +85,10 @@ margePriceはマイニング時の値段を追記するツールです。
 
 ## Installation
 
-  - [Download(Windows)](/master/margePrice.exe)
+  - [Download(Windows)](/master/margePrice/margePrice.exe)
   - others
     1. rubyの実行環境を用意する
-    2. [margePrice.rb](/master/margePrice.rb)を実行する(例: ruby margePrice.rb)
+    2. [margePrice.rb](/master/margePrice/margePrice.rb)を実行する(例: ruby margePrice.rb)
     
 ## author
  - twitter[@cyderts](https://twitter.com/cyderts)
